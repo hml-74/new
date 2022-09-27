@@ -1,0 +1,126 @@
+:root {
+    --primary-color: #EE4D2D;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --height-header: 120px;
+    --height-header-sort-bar: 40px;
+}
+
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Responsive */
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.grid__column-3 {
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 25%;
+    flex: 0 0 25%;
+}
+
+.grid__column-4 {
+    padding-left: 5px;
+    padding-right: 5px;
+    max-width: 33.3333%;
+    flex: 0 0 33.3333%;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn linear 0.1s;
+}
+
+.modal__container {
+    background-color: var(--white-color);
+    width: 500px;
+    max-width: calc(100% - 16px);
+    min-height: 200px;
+    position: relative;
+    border-radius: 2px;
+    animation: growUp ease-in 0.1s;
+}
+
+/* CSS buttons */
+
+.btn {
+    border: none;
+    min-width: 124px;
+    height: 36px;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 0;
+    background-color: var(--white-color);
+}
+
+.btn:hover {
+    opacity: .7;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+/* Pagination */ 
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    align-items: center;
+}
+
+.pagination__item {
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    margin: 0 8px;
+}
+
+.pagination__item--active .pagination__item-link {
+    background-color: var(--primary-color) ;
+    color: var(--white-color);
+}
+
+.pagination__item-link {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #939393;
+    min-width: 32px;
+    height: 28px;
+    border-radius: 2px;
+    display: block;
+}
+
